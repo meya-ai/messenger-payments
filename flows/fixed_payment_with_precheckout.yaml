@@ -1,0 +1,37 @@
+name: fixed_payment_with_precheckout
+states:
+    card_state:
+        component: meya.card
+        properties:
+            title: "Rockin' Monster Bike"
+            text: Awesome bike for awesome kids. Goes fast.
+            image_url: "https://i5.walmartimages.com/asr/9f840e81-43d8-425c-be41-f8aceb218d52_1.f82698857efde929bda61cca0fb98a4a.jpeg"
+            output: button_click
+            buttons:
+                - text: Buy
+                  type: buy
+                  callbacks:
+                    pre_checkout: stock_check
+                  payment_summary:
+                      currency: USD
+                      is_test_payment: true
+                      payment_type: FIXED_AMOUNT
+                      merchant_name: "The bike store"
+                      requested_user_info:
+                          - contact_email
+                          - shipping_address
+                      price_list:
+                          - label: "Rockin' Monster Bike"
+                            amount: 39.97
+    payment_done:
+        component: meya.text
+        properties:
+            text: Thanks for your payment.
+    payment_credential:
+        component: meya.text
+        properties:
+            text: Payment credentials - {{ flow.payment_credential }}
+    requested_user_info:
+        component: meya.text
+        properties:
+            text: Requested user info - {{ flow.requested_user_info }}

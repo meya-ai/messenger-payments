@@ -1,0 +1,30 @@
+-   flow: fixed_in_list
+    intent: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: fixed_list
+-   flow: fixed_payment
+    intent: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: fixed
+-   flow: fixed_payment_with_precheckout
+    intent: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: fixed_pre
+-   flow: flex_payment
+    intent: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: flex
+-   flow: flex_payment_with_precheckout
+    intent: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: flex_pre
+-   flow: hello_world
+    intent: meya.keyword
+    settings:
+        ignorecase: true
+        keyword: hi

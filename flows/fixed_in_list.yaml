@@ -1,0 +1,54 @@
+name: fixed_in_list
+states:
+    list_state:
+        component: meya.list
+        properties:
+            top_element_style: large
+            buttons:
+                - text: "Skip"
+                  action: next
+            elements:
+                - title: "Rockin' Monster Bike"
+                  subtitle: Awesome bike
+                  image_url: "https://i5.walmartimages.com/asr/9f840e81-43d8-425c-be41-f8aceb218d52_1.f82698857efde929bda61cca0fb98a4a.jpeg"
+                  buttons:
+                    - text: Buy
+                      type: buy
+                      payment_summary:
+                          currency: USD
+                          is_test_payment: true
+                          payment_type: FIXED_AMOUNT
+                          merchant_name: "The bike store"
+                          requested_user_info:
+                              - contact_email
+                              - shipping_address
+                          price_list:
+                              - label: 'Huffy 12" bike'
+                                amount: 39.97
+                  default_action:
+                    url: "https://example.com/path"
+                    webview_height_ratio: tall
+                - title: "Fire Red Bike"
+                  subtitle: Awesome bike
+                  image_url: "https://i5.walmartimages.com/asr/61424abc-73f1-45d4-8313-31bd5d9a0343_1.2df10d4b7fab56ef9160d9c3cc8d8a18.jpeg"
+                  buttons:
+                    - text: Buy
+                      type: buy
+                      payment_summary:
+                          currency: USD
+                          is_test_payment: true
+                          payment_type: FIXED_AMOUNT
+                          merchant_name: "The bike store"
+                          requested_user_info:
+                              - contact_email
+                              - shipping_address
+                          price_list:
+                              - label: 'Huffy Red 12" bike'
+                                amount: 49.97
+                  default_action:
+                    url: "https://example.com/path"
+                    webview_height_ratio: tall
+    payment_credential:
+        component: meya.text
+        properties:
+            text: Payment credentials - {{ flow.payment_credential }}

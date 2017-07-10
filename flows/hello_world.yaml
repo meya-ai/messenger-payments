@@ -1,0 +1,9 @@
+name: hello_world
+states:
+    first:
+        component: meya.text
+        properties:
+            text: >
+                Hi! Welcome to the Messenger payments test bot 🙌
+                Before we begin, make sure you have your page connected to a 
+                payment provider 💰, as well as a valid US credit card 💳 ready for testing.
