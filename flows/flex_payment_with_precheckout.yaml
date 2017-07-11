@@ -20,6 +20,7 @@ states:
                       merchant_name: "The bike store"
                       requested_user_info:
                           - contact_name
+                          - shipping_address
                       price_list:
                           - label: "Rockin' Monster Bike"
                             amount: 39.97
