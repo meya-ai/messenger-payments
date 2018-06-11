@@ -1,4 +1,8 @@
-name: hello_world
+triggers:
+  - type: meya.keyword
+    properties:
+        ignorecase: true
+        keyword: hi
 states:
     first:
         component: meya.text

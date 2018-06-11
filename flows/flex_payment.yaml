@@ -1,4 +1,8 @@
-name: flex_payment
+triggers:
+  - type: meya.keyword
+    properties:
+        ignorecase: true
+        keyword: flex
 states:
     card_state:
         component: meya.card

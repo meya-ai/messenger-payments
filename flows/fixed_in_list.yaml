@@ -1,4 +1,8 @@
-name: fixed_in_list
+triggers:
+  - type: meya.keyword
+    properties:
+        ignorecase: true
+        keyword: fixed_list
 states:
     list_state:
         component: meya.list

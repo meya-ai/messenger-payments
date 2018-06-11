@@ -1,4 +1,8 @@
-name: fixed_payment_with_precheckout
+triggers:
+  - type: meya.keyword
+    properties:
+        ignorecase: true
+        keyword: fixed_pre
 states:
     card_state:
         component: meya.card
